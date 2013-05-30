@@ -1,0 +1,27 @@
+@import "compass";
+
+// fixes compass font-face mixin https://gist.github.com/sgreenfield/1557278
+// bug current as of as of 23-May-2013. may be removed when bugs fixed (relative directories and quoting
+@mixin font-face(
+        $name,
+        $font-files,
+        $eot: false,
+        $weight: false,
+        $style: false
+      ) {
+        $iefont: unquote("#{$eot}?iefix");
+        @font-face {
+          font-family: quote($name);
+          @if $eot {
+            src: font-url($eot);
+            $font-files: font-url($iefont) unquote("format('eot')"), $font-files;
+          }
+          @if $weight { font-weight: $weight; }
+          @if $style { font-style: $style; }
+          src: $font-files;
+        }
+      }
+
+/* global reset */
+@include global-reset;
+

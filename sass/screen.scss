@@ -1,3 +1,38 @@
 /* main styles */
 
-@import "compass/reset";
+@import "base";
+
+/* import fonts */
+@include font-face("Open Sans", font-files("OpenSans-Regular.ttf"));
+@include font-face("Museo Slab", font-files("Museo_Slab_500_2-webfont.woff", "Museo_Slab_500_2-webfont.ttf", "Museo_Slab_500_2-webfont.svg", "Museo_Slab_500_2-webfont.otf"));
+
+$sans-serif: "Open Sans", 'open-sans','sans-serif';
+$serif: "Museo Slab",'museo-slab','serif';
+
+body {
+	font-family: $sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $serif;
+}
+
+/* vertical rhythm */
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline;
+
+h1 {
+	@include adjust-font-size-to(36px);
+	@include trailer(.5);
+}
+
+h2 {
+	@include adjust-font-size-to(24px);
+	@include trailer(.5);
+}
+
+h3 {
+	@include trailer(.5);	
+}
+
