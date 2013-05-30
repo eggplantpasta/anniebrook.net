@@ -2,21 +2,26 @@
 
 @import "base";
 
-/* import fonts */
+/* fonts */
 @include font-face("Open Sans", font-files("OpenSans-Regular.ttf"));
 @include font-face("Museo Slab", font-files("Museo_Slab_500_2-webfont.woff", "Museo_Slab_500_2-webfont.ttf", "Museo_Slab_500_2-webfont.svg", "Museo_Slab_500_2-webfont.otf"));
 
 $sans-serif: "Open Sans", 'open-sans','sans-serif';
 $serif: "Museo Slab",'museo-slab','serif';
+$body-colour: #000000;
+$heading-colour: #2d2d2d;
+$outline: 1px #3d3d3d solid;
 
 body {
 	font-family: $sans-serif;
 	font-size: 16px;
 	line-height: 24px;
+	color: $body-colour;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $serif;
+	color: $heading-colour;
 }
 
 h2 {
@@ -38,25 +43,32 @@ html {
 body {
 	width: 640px;
 	margin: auto;
+	padding: 20px;
+	background-color: rgba(255,255,255,0.6);
 }
 
 /* header */
-header#logo {
-	padding: 20px;
-	background-color: rgba(255,255,255,0.6);
-	margin: 20px 0 20px 0;
-	border: 1px #3d3d3d solid;
+header {
+   margin-top: 50px;
 }
 
-header img {
+div#logo {
+	padding: 20px;
+	background-color: #ffffff;
+	margin-bottom: 20px;
+	border: $outline;
+}
+
+div#logo img {
 	width: 128px;
 	height: 128px;
 	float: left;
 	margin: 0 20px 20px 0;
 }
 
-header h1 {
+div#logo h1 {
 	font-family: $sans-serif;
+	color: #000000;
 	font-weight: 900;
 	font-size: 64px;
 	line-height: 64px;
@@ -68,6 +80,15 @@ header p {
 	margin-top: 12px;
 	font-weight: 100;
 	letter-spacing: 1px;
+}
+
+/* navigation */
+#navigation {
+	width: 100px;
+	background-color: #ffffff;
+	color: $heading-colour;
+	position: fixed;
+	z-index: 10;
 }
 
 /* address formatting */
@@ -88,6 +109,7 @@ section#address {
 	font-size: 24px;
 	line-height: 24px;
 	font-weight: 900;
+	color: $heading-colour;
 }
 
 .url, .org {
@@ -118,7 +140,7 @@ a.vcf {
 	margin: 0;
 }
 
-/* downloads */
-#follow {
+/* gardens */
+#gardens {
 	clear: both;
 }
