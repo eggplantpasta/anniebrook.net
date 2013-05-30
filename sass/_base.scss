@@ -1,7 +1,7 @@
 @import "compass";
 
 // fixes compass font-face mixin https://gist.github.com/sgreenfield/1557278
-// bug current as of as of 23-May-2013. may be removed when bugs fixed (relative directories and quoting
+// bug current as of as of 23-May-2013. may be removed when bugs fixed (relative directories and quoting)
 @mixin font-face(
         $name,
         $font-files,
