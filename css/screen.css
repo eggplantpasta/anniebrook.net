@@ -90,3 +90,8 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+
+/* body width */
+body {
+  width: 660px;
+  margin: auto; }
