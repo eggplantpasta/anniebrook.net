@@ -11,29 +11,18 @@ $serif: "Museo Slab",'museo-slab','serif';
 
 body {
 	font-family: $sans-serif;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $serif;
 }
 
-/* vertical rhythm */
-$base-font-size: 16px;
-$base-line-height: 24px;
-@include establish-baseline;
-
-h1 {
-	@include adjust-font-size-to(36px);
-	@include trailer(.5);
-}
-
 h2 {
-	@include adjust-font-size-to(24px);
-	@include trailer(.5);
-}
-
-h3 {
-	@include trailer(.5);	
+	font-size: 24px;
+	line-height: 48px;
+	padding-top: 12px;
 }
 
 /* large background */
@@ -47,6 +36,89 @@ html {
 
 /* body width */
 body {
-	width: 660px;
+	width: 640px;
 	margin: auto;
+}
+
+/* header */
+header#logo {
+	padding: 20px;
+	background-color: rgba(255,255,255,0.6);
+	margin: 20px 0 20px 0;
+	border: 1px #3d3d3d solid;
+}
+
+header img {
+	width: 128px;
+	height: 128px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+header h1 {
+	font-family: $sans-serif;
+	font-weight: 900;
+	font-size: 64px;
+	line-height: 64px;
+}
+
+header p {
+	clear: both;
+	font-size: 24px;
+	margin-top: 12px;
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+
+/* address formatting */
+section#address {
+	clear: both;
+	overflow: hidden;
+}
+
+.vcard {
+	float: left;
+	width: 200px;
+	margin-right: 20px;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.tel {
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 900;
+}
+
+.url, .org {
+	display: none;
+}
+
+a.vcf {
+	float: left;
+}
+
+.vcf img {
+	width: 60px;
+	height: 46px;
+}
+
+/* services section */
+#services {
+	clear: both;
+}
+
+.service {
+	width: 200px;
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+#maintenance {
+	margin: 0;
+}
+
+/* downloads */
+#follow {
+	clear: both;
 }
