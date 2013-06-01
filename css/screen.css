@@ -183,6 +183,9 @@ a.vcf {
   float: left;
   margin: 0 20px 0 0; }
 
+.service img {
+  border: 1px #3d3d3d solid; }
+
 #maintenance {
   margin: 0; }
 
