@@ -9,6 +9,16 @@
 </head>
 
 <body>
+	<div id="fb-root"></div>
+	<script>
+	(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
 
 	<header id="logo">
 		<img src="images/logo256.png" />
@@ -72,6 +82,7 @@
 	<section id="follow">
 		<h2>Follow Us</h2>
 		<p>See our latest work and follow us on <a href="https://www.facebook.com/pages/Anniebrook-Landscapes/265824196783057">facebook</a>.</p>
+		<div class="fb-like" data-href="https://www.facebook.com/pages/Anniebrook-Landscapes/265824196783057" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
 	</section>
 
 </body>
