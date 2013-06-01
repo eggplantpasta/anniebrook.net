@@ -78,6 +78,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
   src: url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'), url('../fonts/OpenSans-ExtraBold-webfont.otf') format('opentype'), url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-ExtraBold-webfont.svg') format('svg'); }
 
+/* global font styles */
 body {
   font-family: "Open Sans", "OpenSans", sans-serif;
   font-size: 16px;
@@ -108,43 +109,52 @@ html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed; }
+  background-size: cover; }
 
 /* body width */
 body {
-  width: 680px;
+  width: 700px;
   margin: auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.6); }
 
 /* header */
-header#logo {
-  padding: 20px;
+header {
+  position: relative;
+  margin-bottom: 40px; }
+
+#logo {
+  width: 380px;
+  padding: 15px;
   background-color: #ffffff;
-  margin-bottom: 20px;
-  border: 1px #3d3d3d solid; }
+  border: 1px #3d3d3d solid;
+  position: absolute;
+  bottom: -40px;
+  left: 20px; }
 
-header img {
-  width: 128px;
-  height: 128px;
+#logo img {
+  width: 96px;
+  height: 96px;
   float: left;
-  margin: 0 20px 20px 0; }
+  margin: 0px 15px 15px 0px; }
 
-header h1 {
+#logo h1 {
   font-family: "Open Sans", "OpenSans", sans-serif;
   color: black;
   font-weight: 900;
-  font-size: 64px;
-  line-height: 64px; }
+  font-size: 44px;
+  line-height: 44px; }
 
-header p {
+#logo p {
   clear: both;
-  font-size: 24px;
-  margin-top: 12px;
+  font-size: 18px;
   font-weight: 100;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   color: black; }
+
+header img {
+  border: 1px #3d3d3d solid;
+  z-index: 1; }
 
 /* address formatting */
 section#address {
@@ -153,7 +163,7 @@ section#address {
 
 .vcard {
   float: left;
-  width: 200px;
+  width: 220px;
   margin-right: 20px;
   font-size: 12px;
   line-height: 16px; }
@@ -162,7 +172,7 @@ section#address {
   font-size: 24px;
   line-height: 24px;
   color: #3d3d3d;
-  padding-bottom: 10px; }
+  padding-bottom: 20px; }
 
 .url, .org {
   display: none; }
@@ -178,8 +188,11 @@ a.vcf {
 #services {
   clear: both; }
 
+#services header {
+  margin-bottom: 0; }
+
 .service {
-  width: 200px;
+  width: 220px;
   float: left;
   margin: 0 20px 0 0; }
 

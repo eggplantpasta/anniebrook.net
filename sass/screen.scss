@@ -11,15 +11,22 @@
 
 $sans-serif: "Open Sans", "OpenSans",sans-serif;
 $serif: serif;
+
+$outline: 1px #3d3d3d solid;
+
 $body-color: #000000;
 $heading-color: #3d3d3d;
 $logo-color: #000000;
-$outline: 1px #3d3d3d solid;
 $logo-blue: #0E6C9B;
 $logo-yellow: #EBEF2E;
 $highlight: $logo-blue;
 $highlight-active: $logo-blue;
 
+$pagewidth: 700px;
+$columnwidth: 220px;
+$gutterwidth: 20px;
+
+/* global font styles */
 body {
 	font-family: $sans-serif;
 	font-size: 16px;
@@ -56,47 +63,58 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 /* body width */
 body {
-	width: 680px;
+	width: $pagewidth;
 	margin: auto;
-	padding: 20px;
+	padding: $gutterwidth;
 	background-color: rgba(255,255,255,0.6);
 }
 
 /* header */
-header#logo {
-	padding: 20px;
+header {
+	position: relative;
+	margin-bottom: 40px;
+}
+
+#logo {
+	width: 380px;
+	padding: 15px;
 	background-color: #ffffff;
-	margin-bottom: 20px;
 	border: $outline;
+	position: absolute;
+	bottom: -40px;
+	left: 20px;
 }
 
-header img {
-	width: 128px;
-	height: 128px;
+#logo img {
+	width: 96px;
+	height: 96px;
 	float: left;
-	margin: 0 20px 20px 0;
+	margin: 0px 15px 15px 0px;
 }
 
-header h1 {
+#logo h1 {
 	font-family: $sans-serif;
 	color: $logo-color;
 	font-weight: 900;
-	font-size: 64px;
-	line-height: 64px;
+	font-size: 44px;
+	line-height:44px;
 }
 
-header p {
+#logo p {
 	clear: both;
-	font-size: 24px;
-	margin-top: 12px;
+	font-size: 18px;
 	font-weight: 100;
-	letter-spacing: 1px;
+	letter-spacing: 0px;
 	color: $logo-color;
+}
+
+header img {
+	border: $outline;
+	z-index: 1;
 }
 
 /* address formatting */
@@ -107,8 +125,8 @@ section#address {
 
 .vcard {
 	float: left;
-	width: 200px;
-	margin-right: 20px;
+	width: $columnwidth;
+	margin-right: $gutterwidth;
 	font-size: 12px;
 	line-height: 16px;
 }
@@ -117,7 +135,7 @@ section#address {
 	font-size: 24px;
 	line-height: 24px;
 	color: $heading-color;
-	padding-bottom: 10px;
+	padding-bottom: $gutterwidth;
 }
 
 .url, .org {
@@ -138,10 +156,14 @@ a.vcf {
 	clear: both;
 }
 
+#services header {
+	margin-bottom: 0;
+}
+
 .service {
-	width: 200px;
+	width: $columnwidth;
 	float: left;
-	margin: 0 20px 0 0;
+	margin: 0 $gutterwidth 0 0;
 }
 
 .service img {
