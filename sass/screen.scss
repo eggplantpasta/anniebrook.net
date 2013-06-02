@@ -27,7 +27,7 @@ $columnwidth: 220px;
 $gutterwidth: 20px;
 
 /* global font styles */
-body {
+body, p {
 	font-family: $sans-serif;
 	font-size: 16px;
 	line-height: 24px;
@@ -56,6 +56,10 @@ a:hover, a:active {
 	text-decoration: underline;
 }
 
+section {
+	clear: both;
+}
+
 /* large background */
 html { 
   background: url(../images/background-large.jpeg) no-repeat center center fixed; 
@@ -76,7 +80,7 @@ body {
 /* header */
 header {
 	position: relative;
-	margin-bottom: 40px;
+	margin-bottom: 60px;
 }
 
 #logo {
@@ -118,15 +122,19 @@ header img {
 }
 
 /* address formatting */
-section#address {
-	clear: both;
-	overflow: hidden;
+.vcard, .vcf {
+	width: $columnwidth;
+	margin-right: $gutterwidth;
+	float: left;
 }
 
-.vcard {
+div#address-block {
 	float: left;
 	width: $columnwidth;
 	margin-right: $gutterwidth;
+}
+
+.vcard {
 	font-size: 12px;
 	line-height: 16px;
 }
@@ -142,20 +150,13 @@ section#address {
 	display: none;
 }
 
-a.vcf {
-	float: left;
-}
-
 .vcf img {
 	width: 60px;
 	height: 46px;
+	margin-top: $gutterwidth;
 }
 
 /* services section */
-#services {
-	clear: both;
-}
-
 #services header {
 	margin-bottom: 0;
 }
@@ -174,7 +175,6 @@ a.vcf {
 	margin: 0;
 }
 
-/* social media links */
-#follow {
-	clear: both;
+#fb-like {
+	float: right;
 }

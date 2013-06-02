@@ -1,2 +1,4 @@
 .DS_store
 .sass-cache/
+# ignore css files as they are generated via sass compile 
+css/
