@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Brett Roper -- Developer / Designer -- @brettroper
 
 # THANKS
 
-    <name>
+    GitHub, Jen Simmons, css-tricks.com, leveluptuts.com
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
+    Sass, Compass
