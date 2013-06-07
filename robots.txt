@@ -1,3 +1,7 @@
 # robotstxt.org/
 
 User-agent: *
+
+# prevent crawling of dev site for SEO reasons
+# remove from production
+Disallow: /
