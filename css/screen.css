@@ -1,0 +1,207 @@
+/* main styles */
+/* global reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* import fonts */
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/OpenSans-Light-webfont.otf') format('opentype'), url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Light-webfont.svg') format('svg'); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.otf') format('opentype'), url('../fonts/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans-Regular.svg') format('svg'); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: normal;
+  src: url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'), url('../fonts/OpenSans-Semibold-webfont.otf') format('opentype'), url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Semibold-webfont.svg') format('svg'); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/OpenSans-Bold-webfont.woff') format('woff'), url('../fonts/OpenSans-Bold-webfont.otf') format('opentype'), url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Bold-webfont.svg') format('svg'); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-style: normal;
+  src: url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'), url('../fonts/OpenSans-ExtraBold-webfont.otf') format('opentype'), url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-ExtraBold-webfont.svg') format('svg'); }
+
+/* global font styles */
+body {
+  font-family: "Open Sans", "OpenSans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: black; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", "OpenSans", sans-serif;
+  font-weight: 100;
+  color: #3d3d3d; }
+
+h2 {
+  font-size: 32px;
+  line-height: 48px;
+  padding: 16px 0 24px 0; }
+
+a, a:visited {
+  color: #0e6c9b;
+  text-decoration: none; }
+
+a:hover, a:active {
+  color: #0e6c9b;
+  text-decoration: underline; }
+
+/* large background */
+html {
+  background: url('../images/background-large.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+/* body width */
+body {
+  width: 700px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.6); }
+
+/* header */
+header {
+  position: relative;
+  margin-bottom: 40px; }
+
+#logo {
+  width: 380px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px #3d3d3d solid;
+  position: absolute;
+  bottom: -40px;
+  left: 20px; }
+
+#logo img {
+  width: 96px;
+  height: 96px;
+  float: left;
+  margin: 0px 15px 15px 0px; }
+
+#logo h1 {
+  font-family: "Open Sans", "OpenSans", sans-serif;
+  color: black;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 44px; }
+
+#logo p {
+  clear: both;
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 0px;
+  color: black; }
+
+header img {
+  border: 1px #3d3d3d solid;
+  z-index: 1; }
+
+/* address formatting */
+section#address {
+  clear: both;
+  overflow: hidden; }
+
+.vcard {
+  float: left;
+  width: 220px;
+  margin-right: 20px;
+  font-size: 12px;
+  line-height: 16px; }
+
+.tel {
+  font-size: 24px;
+  line-height: 24px;
+  color: #3d3d3d;
+  padding-bottom: 20px; }
+
+.url, .org {
+  display: none; }
+
+a.vcf {
+  float: left; }
+
+.vcf img {
+  width: 60px;
+  height: 46px; }
+
+/* services section */
+#services {
+  clear: both; }
+
+#services header {
+  margin-bottom: 0; }
+
+.service {
+  width: 220px;
+  float: left;
+  margin: 0 20px 0 0; }
+
+.service img {
+  border: 1px #3d3d3d solid; }
+
+#maintenance {
+  margin: 0; }
+
+/* social media links */
+#follow {
+  clear: both; }
